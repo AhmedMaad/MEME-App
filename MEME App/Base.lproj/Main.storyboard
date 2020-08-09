@@ -37,13 +37,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-oe-JZX">
-                                <rect key="frame" x="16" y="69" width="343" height="532"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-oe-JZX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hdj-hz-GR2">
                                 <rect key="frame" x="24" y="72" width="326" height="39"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -56,10 +56,16 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-hO-YWl">
-                                <rect key="frame" x="16" y="20" width="61" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-hO-YWl">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Mt-4a-DgC"/>
+                                    <constraint firstAttribute="width" constant="40" id="D19-x3-eXi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Share"/>
+                                <state key="normal" image="upload_icon">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="shareMeme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mV7-Wf-SOZ"/>
                                 </connections>
@@ -68,22 +74,20 @@
                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dxz-HF-Ub2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4aO-3P-eXN"/>
+                            <constraint firstItem="IM8-oe-JZX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7AV-ja-Qe5"/>
                             <constraint firstItem="ALu-hO-YWl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9gL-YE-glZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IL1-Vl-66W" secondAttribute="trailing" constant="25" id="BJl-MR-xnt"/>
                             <constraint firstItem="Dxz-HF-Ub2" firstAttribute="top" secondItem="IL1-Vl-66W" secondAttribute="bottom" constant="46" id="Bya-B7-9ob"/>
                             <constraint firstItem="Hdj-hz-GR2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="IeY-nR-le1"/>
+                            <constraint firstItem="IM8-oe-JZX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="In2-zG-KR1"/>
                             <constraint firstItem="Hdj-hz-GR2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Jdi-CZ-160"/>
                             <constraint firstItem="Dxz-HF-Ub2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MEx-xQ-WZu"/>
-                            <constraint firstItem="IM8-oe-JZX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="201" id="TtI-cK-rCl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IM8-oe-JZX" secondAttribute="trailing" constant="25" id="Tud-kw-kJQ"/>
                             <constraint firstItem="ALu-hO-YWl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a2i-78-u0Q"/>
                             <constraint firstItem="Dxz-HF-Ub2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k0K-oH-Qk5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IM8-oe-JZX" secondAttribute="bottom" constant="221" id="owk-tw-SdU"/>
-                            <constraint firstItem="IM8-oe-JZX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="sJh-Jl-x8R"/>
-                            <constraint firstItem="Dxz-HF-Ub2" firstAttribute="top" secondItem="IM8-oe-JZX" secondAttribute="bottom" constant="177" id="toJ-6F-0Da"/>
+                            <constraint firstItem="IM8-oe-JZX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kvb-EO-dcO"/>
+                            <constraint firstItem="Dxz-HF-Ub2" firstAttribute="top" secondItem="IM8-oe-JZX" secondAttribute="bottom" id="ooD-oG-dpc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hdj-hz-GR2" secondAttribute="trailing" constant="25" id="xfS-1p-7ro"/>
                             <constraint firstItem="IL1-Vl-66W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="yKw-md-F7F"/>
-                            <constraint firstItem="IL1-Vl-66W" firstAttribute="top" secondItem="IM8-oe-JZX" secondAttribute="bottom" constant="92" id="zc1-vy-q06"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -101,4 +105,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="127.28635682158921"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="upload_icon" width="714" height="982"/>
+    </resources>
 </document>

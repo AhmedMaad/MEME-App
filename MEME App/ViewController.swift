@@ -18,6 +18,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var toolbar: UIToolbar!
     
+    let memeTextAttributes: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.strokeColor: UIColor.black,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedString.Key.strokeWidth:  2
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
@@ -25,6 +32,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.delegate = self
         subscribeToKeyboardNotifications()
         shareButton.isEnabled = false
+        topText.defaultTextAttributes = memeTextAttributes
+        bottomText.defaultTextAttributes = memeTextAttributes
+        topText.textAlignment = .center
+        bottomText.textAlignment = .center
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,9 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func pickImage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        openImagePicker(sourceType: .photoLibrary)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -52,9 +61,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func openCamera(_ sender: Any) {
+        openImagePicker(sourceType: .camera)
+    }
+    
+    func openImagePicker(sourceType: UIImagePickerController.SourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = sourceType
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -78,8 +91,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
-        
+        if bottomText.isFirstResponder{
         view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
 
     func unsubscribeFromKeyboardNotifications() {
@@ -144,5 +158,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    
 }
-
