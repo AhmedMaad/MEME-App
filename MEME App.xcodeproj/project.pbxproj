@@ -12,6 +12,11 @@
 		8D7E10C724DEFDAF00010FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E10C524DEFDAF00010FCA /* Main.storyboard */; };
 		8D7E10C924DEFDB200010FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E10C824DEFDB200010FCA /* Assets.xcassets */; };
 		8D7E10CC24DEFDB200010FCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E10CA24DEFDB200010FCA /* LaunchScreen.storyboard */; };
+		8D7E312C2507922B00D62056 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E312B2507922B00D62056 /* MemeCollectionViewController.swift */; };
+		8D7E312E250792BC00D62056 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E312D250792BC00D62056 /* MemeTableViewController.swift */; };
+		8D7E3130250794ED00D62056 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E312F250794ED00D62056 /* Meme.swift */; };
+		8D88EC232507B1A80019347E /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88EC222507B1A80019347E /* CollectionItem.swift */; };
+		8D88EC252508ED0E0019347E /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88EC242508ED0E0019347E /* MemeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8D7E10C824DEFDB200010FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D7E10CB24DEFDB200010FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D7E10CD24DEFDB200010FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D7E312B2507922B00D62056 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		8D7E312D250792BC00D62056 /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		8D7E312F250794ED00D62056 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		8D88EC222507B1A80019347E /* CollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
+		8D88EC242508ED0E0019347E /* MemeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				8D7E10C124DEFDAF00010FCA /* AppDelegate.swift */,
 				8D7E10C324DEFDAF00010FCA /* ViewController.swift */,
+				8D7E312B2507922B00D62056 /* MemeCollectionViewController.swift */,
+				8D7E312D250792BC00D62056 /* MemeTableViewController.swift */,
+				8D7E312F250794ED00D62056 /* Meme.swift */,
+				8D88EC222507B1A80019347E /* CollectionItem.swift */,
+				8D88EC242508ED0E0019347E /* MemeDetailViewController.swift */,
 				8D7E10C524DEFDAF00010FCA /* Main.storyboard */,
 				8D7E10C824DEFDB200010FCA /* Assets.xcassets */,
 				8D7E10CA24DEFDB200010FCA /* LaunchScreen.storyboard */,
@@ -136,7 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7E10C424DEFDAF00010FCA /* ViewController.swift in Sources */,
+				8D7E312C2507922B00D62056 /* MemeCollectionViewController.swift in Sources */,
 				8D7E10C224DEFDAF00010FCA /* AppDelegate.swift in Sources */,
+				8D7E312E250792BC00D62056 /* MemeTableViewController.swift in Sources */,
+				8D88EC252508ED0E0019347E /* MemeDetailViewController.swift in Sources */,
+				8D7E3130250794ED00D62056 /* Meme.swift in Sources */,
+				8D88EC232507B1A80019347E /* CollectionItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

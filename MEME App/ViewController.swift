@@ -110,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.cgRectValue.height
     }
     
-    struct Meme{
+    /*struct Meme{
         let topString: String
         let bottomString: String
         let image: UIImageView
@@ -122,13 +122,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.image = image
             self.memedImage = memedImage
         }
-    }
+    }*/
     
     func generateMemedImage() -> UIImage {
      
         shareButton.isHidden = true
         toolbar.isHidden = true
-        
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -144,6 +143,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func save(){
         let meme =  Meme(topString: topText.text!, bottomString: bottomText.text!, image: imageView!, memedImage: generateMemedImage())
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     
