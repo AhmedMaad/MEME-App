@@ -156,8 +156,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(shareActivity, animated: true, completion: nil)
         shareActivity.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
             if completed {
+                print("Meme is saved")
                 self.save()
                 self.dismiss(animated: true, completion: nil)
+            }
+            else{
+                print("Meme is not saved")
             }
         }
     }

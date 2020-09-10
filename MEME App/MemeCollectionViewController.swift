@@ -11,11 +11,25 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController{
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes: [Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         return appDelegate.memes
+    }
+    
+    override func viewDidLoad() {
+        let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        //space between items within a row or column
+        flowLayout.minimumInteritemSpacing = space
+        //space between rows or columns
+        flowLayout.minimumLineSpacing = space
+        //governs cell size
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        print("No of Memes in collection view \(memes.count)")
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

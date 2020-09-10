@@ -19,6 +19,10 @@ class MemeTableViewController: UITableViewController{
         return appDelegate.memes
     }
     
+    override func viewDidLoad() {
+        print("No of Memes in table view \(memes.count)")
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
