@@ -30,6 +30,7 @@ class MemeCollectionViewController: UICollectionViewController{
         //governs cell size
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
         print("No of Memes in collection view \(memes.count)")
+        collectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

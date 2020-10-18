@@ -22,20 +22,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  2
+        NSAttributedString.Key.strokeWidth: -3
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        topText.delegate = self
-        bottomText.delegate = self
         subscribeToKeyboardNotifications()
         shareButton.isEnabled = false
-        topText.defaultTextAttributes = memeTextAttributes
-        bottomText.defaultTextAttributes = memeTextAttributes
-        topText.textAlignment = .center
-        bottomText.textAlignment = .center
+        configureMemeTextField(textField: topText)
+        configureMemeTextField(textField: bottomText)
+    }
+    
+    func configureMemeTextField(textField: UITextField) {
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,6 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
     
@@ -109,20 +112,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height
     }
-    
-    /*struct Meme{
-        let topString: String
-        let bottomString: String
-        let image: UIImageView
-        let memedImage: UIImage
-        
-        init(topString: String, bottomString: String, image: UIImageView, memedImage: UIImage) {
-            self.topString = topString
-            self.bottomString = bottomString
-            self.image = image
-            self.memedImage = memedImage
-        }
-    }*/
     
     func generateMemedImage() -> UIImage {
      

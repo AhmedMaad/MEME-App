@@ -21,6 +21,7 @@ class MemeTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         print("No of Memes in table view \(memes.count)")
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
